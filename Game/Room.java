@@ -1,12 +1,11 @@
 /**
-* Overview:   a file for testing concepts
+* Overview:	Class that defines Room objects. 
 *
 * @author:  Daniel W. Jaeger
-* @version: 1.0
-* Date:     8/8/20
+* @version: 1.1
+* Date:     8/9/20
 **/
 
-// import java.util.Random;
 
 public class Room {
 
@@ -15,7 +14,6 @@ public class Room {
     private Room exit;
     private Room routeA;
     private Room routeB;
-    // private Random random;
 
     public Room(String name, String description) {
         this.description = description;
@@ -25,10 +23,6 @@ public class Room {
         routeB =null;
     }
 
-    // public void setName(String name){
-    //     this.name = name;
-    // }
-
     public String getName(){
         return name;
     }
@@ -36,10 +30,6 @@ public class Room {
     public String getDescription() {
         return description;
     }
-
-    // public int getRandomNumber(){
-    //     return random.nextInt(8);
-    // }
 
     public void setRouteA(Room a){
         this.routeA = a;
