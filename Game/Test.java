@@ -23,15 +23,69 @@ public class Test{
 	private static int i;
 	private static int randomRoom;
 	private static List<Integer> enteredRooms = new ArrayList<>();
+	private static List<Integer> randomNumbers = new ArrayList<>();
 	private static Room room; 
 	private static boolean run;
+	private static int sum = 0;
+	private static float avg = 0.0f;
+	private static int roll = 0;
 
-	public static int randomNumber(){
+
+	private static int randomNumber(){
 		return randNum.nextInt(8);
 	}
 
-	
+	protected static int dice(){
+		return randNum.nextInt(6) + 1;
+	}
 
+	// protected static int randomNumberCombat(){
+	// 	return randNum.nextInt(11) + 2;
+	// } 
+	
+	protected static int twoDSix(){
+		return (dice() + dice());
+	}
+
+	// protected static List<Integer> testRandomNumberCombat(){
+	// 	for (i = 0; i < 1000; i++){
+	// 		randomNumbers.add(randomNumberCombat());
+	// 		// System.out.println(randomNumberCombat());
+	// 	}
+	// 	System.out.println(randomNumbers);
+	// 	return randomNumbers;
+	// }
+
+	protected static List<Integer> testTwoDSix(){
+		for (i = 0; i < 1000; i++){
+			randomNumbers.add(twoDSix());
+			// System.out.println(randomNumberCombat());
+		}
+		System.out.println(randomNumbers);
+		return randomNumbers;
+	}
+
+	protected static void averageRandomNumbers(List<Integer> list){
+		list = list;
+		for (i = 0; i < list.size(); i++){
+			sum = sum + list.get(i);
+		}
+
+		System.out.println("Sum: " + sum);
+		System.out.println("n: " + list.size());
+
+		avg = (float)sum / list.size();
+		System.out.println("Average = sum / n ");
+		System.out.println("Average:  " + avg);
+
+		containsNumber(list);
+	}
+
+	protected static void containsNumber(List<Integer> list){
+		for (i = 2; i < 13; i++){
+			System.out.println("Frequency of " + i + ": " + Collections.frequency(list, i));
+		}
+	}
 
 	public static void main(String[] args){
 
@@ -100,6 +154,10 @@ public class Test{
 			}
 		}
 		
+		// averageRandomNumbers(testRandomNumberCombat());
+		averageRandomNumbers(testTwoDSix());
+
+
 
 		// System.out.println("Random number is: " + randomRoom);
 		// room = table.get(randomRoom);

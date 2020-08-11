@@ -105,7 +105,8 @@ public class Game{
 				continue;
 			}
 			else if(direction.equals("q")) {
-				runGame = false;
+				// runGame = false;
+				System.exit(0);
 			}
 			else {
 				System.out.println("You can't go that way.");
@@ -151,8 +152,9 @@ public class Game{
 						continue;
 					}
 					else if(direction.equals("q")) {
-						runGame = false;
-						break;
+						// runGame = false;
+						// break;
+						System.exit(0);
 					}
 					else {
 						System.out.println("You can't go that way.");
@@ -184,7 +186,8 @@ public class Game{
 				continue;
 			}
 			else if(direction.equals("q")) {
-				runGame = false;
+				// runGame = false;
+				System.exit(0);
 			}
 			else {
 				System.out.println("You can't go that way.");
