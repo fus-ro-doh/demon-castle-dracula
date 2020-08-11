@@ -31,7 +31,7 @@ public class Castle{
 	private Room bridge;
 	private Room throneRoom;
 
-	public Castle(){
+	protected Castle(){
 		this.gate = new Room("Gate", "\nAs you reach the edge of the haunted forest, the trees part and Demon Castle Dracula comes towering into view. It is an imposing mass of obsidian spires jutting into the crimson sky like broken, blackened staves. A high stone wall with screaming faces carved into it extends in either direction, as far as the eye can see. The only ingress to the estate grounds appears to be the heavy iron gate in front of you, beyond which you can see the vast cemetery that seemingly covers the estate grounds from here to the castle proper.\n\nThe sun is setting. You can hear the howls of the Night Beasts as they close in behind you.\n\nWhat do you do?");
 		this.cemetery = new Room("Cemetery", "\nBefore you lies a sprawling necropolis of gravestones, mausolea, and marble statuary. As the sky darkens, a choking, glowing miasma wafts up from the ground and swirls around you, blocking your vision.");
 		this.moat = new Room("Moat", "\nThe front entrance to Demon Castle Dracula is defended by a broad moat filled with steaming, bubbling blood. You can see a drawbridge built into the castle side of the curtain wall, but it is currently up. Strange creatures stir atop the curtain wall and underneath the surface of the blood moat.");
@@ -59,7 +59,11 @@ public class Castle{
 		this.bridge.setExit(throneRoom);		
 	}
 
-	public Room getRoom(){
+	protected Room getRoom(){
 		return gate;
 	}
-}
+
+	protected Room getTower(){
+		return tower; 
+	}
+}//end class

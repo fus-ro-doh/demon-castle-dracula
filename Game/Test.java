@@ -85,7 +85,7 @@ public class Test{
 
 		run = true;
 		while(run){
-			randomRoom = randomNumber(8);
+			randomRoom = randomNumber();
 			room = table.get(randomRoom);
 			if (enteredRooms.contains(randomRoom)){
 				System.out.println("You try to reenter the " + room.getName() + ", but that's not allowed.");

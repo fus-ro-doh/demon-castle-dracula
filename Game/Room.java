@@ -15,48 +15,48 @@ public class Room {
     private Room routeA;
     private Room routeB;
 
-    public Room(String name, String description) {
-        this.description = description;
+    protected Room(String name, String description) {
         this.name = name;
+        this.description = description;
         exit = null;
         routeA = null;
         routeB =null;
     }
 
-    public String getName(){
+    protected String getName(){
         return name;
     }
 
-    public String getDescription() {
+    protected String getDescription() {
         return description;
     }
 
-    public void setRouteA(Room a){
+    protected void setRouteA(Room a){
         this.routeA = a;
     }   
 
-    public Room getRouteA(){
+    protected Room getRouteA(){
         return routeA;
     }
 
-    public void setRouteB(Room b){
+    protected void setRouteB(Room b){
         this.routeB = b;
     }
 
-    public Room getRouteB(){
+    protected Room getRouteB(){
         return routeB;
     }
 
-    public void setRoutes(Room a, Room b){
+    protected void setRoutes(Room a, Room b){
         setRouteA(a);
         setRouteB(b);
     }
 
-    public void setExit(Room exit){
+    protected void setExit(Room exit){
         this.exit = exit;
     }
 
-    public Room getExit(){
+    protected Room getExit(){
         return exit;
     }
 

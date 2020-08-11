@@ -25,7 +25,7 @@ public class Game{
 	private static String direction;
 	private static boolean runGame;
 	private static boolean room;
-	private static int combatChoice;
+	// private static int combatChoice;
 	private static Random random = new Random();
 	private static ManorHouse manorHouse = new ManorHouse();
 	private static List<Room> manorRoomList = manorHouse.createList();
@@ -36,7 +36,7 @@ public class Game{
 
 
 	//create a method to print the movement instructions 
-	public static void instructions(){
+	private static void instructions(){
 		System.out.println("");
 		System.out.println("Game Instructions:");		
 		System.out.println("");
@@ -54,7 +54,7 @@ public class Game{
 		System.out.println("");
 	} //end instructions method
 
-	public static void pickRoute(){
+	private static void pickRoute(){
 		runGame = true;
 		while(runGame){
 			System.out.println(currentRoom);
@@ -83,7 +83,7 @@ public class Game{
 		}
 	}
 
-	public static void approach(){
+	private static void approach(){
 		runGame = true;
 		while(runGame) {
 			System.out.println(currentRoom);
@@ -114,19 +114,21 @@ public class Game{
 
 	} //end move method
 
-	public static void manor(){
+	private static void manor(){
 		runGame = true;
 		room = true;
 		while(runGame){
 			randomNumber = random.nextInt(8);
 			currentRoom = table.get(randomNumber);
 			if (enteredRooms.contains(randomNumber)){
+				currentRoom = castle.getTower();
 				System.out.println();
 				System.out.println("You discovered The Tower.");
 				System.out.println("You're in the endgame now");
 				System.out.println();
-				// runGame = false;
-				System.exit(0);
+				runGame = false;
+				break;
+				// System.exit(0);
 			}
 			else{	
 				System.out.println(currentRoom);
@@ -160,10 +162,41 @@ public class Game{
 		}
 	}
 
+	private static void ascent(){
+		runGame = true;
+		while(runGame) {
+			System.out.println(currentRoom);
+			System.out.println("");
+			System.out.println("Are you ready to leave?");
+			System.out.println("Type \"y\" or \"n\"");
+
+			direction = getInput.nextLine();
+			direction = direction.toLowerCase();
+			
+			if (direction.equals("y") || direction.equals("yes")) {
+				currentRoom = currentRoom.getExit();
+				if(currentRoom.getName() == "Manor House"){
+					System.out.println(currentRoom);
+					runGame = false;
+				}
+			}
+			else if (direction.equals("n") || direction.equals("no")){
+				continue;
+			}
+			else if(direction.equals("q")) {
+				runGame = false;
+			}
+			else {
+				System.out.println("You can't go that way.");
+			}
+		}
+	} 
+
 	public static void main (String[] args){
 		instructions();
 		pickRoute();
 		approach();		
 		manor();
+		ascent();
 	} //end main 
 } //end GameRunner class

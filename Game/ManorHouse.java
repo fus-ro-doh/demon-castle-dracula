@@ -26,7 +26,7 @@ public class ManorHouse{
 	private Hashtable<Integer, Room> table;
 	private int i;
 
-	public ManorHouse(){
+	protected ManorHouse(){
 		this.banquetHall = new Room("Banquet Hall", "\nYou enter a cavernous ballroom with taxidermied animals hanging on the walls and over the fireplace. Ghostly music emanates from unseen instruments. There are long tables overflowing with delicious-smelling food. A thunderstorm rages outside");
 		this.livingQuarters = new Room("Living Quarters", "\nYou enter a luxuriously appointed suite of bedrooms, antechambers, and salons filled with finely crafted furniture");
 		this.lunarium = new Room("Lunarium", "\nYou enter the Lunarium, an enormous greenhouse suffused with the blood moon eclipse’s crimson glow.");
