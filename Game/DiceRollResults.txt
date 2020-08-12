@@ -1,0 +1,244 @@
+
+FREQUENCY OF DICE ROLL SUMS
+Frequency of 2: 268
+Frequency of 3: 537
+Frequency of 4: 832
+Frequency of 5: 1099
+Frequency of 6: 1389
+Frequency of 7: 1696
+Frequency of 8: 1389
+Frequency of 9: 1119
+Frequency of 10: 868
+Frequency of 11: 528
+Frequency of 12: 275
+
+PERCENTAGE DISTRIBUTION OF DICE ROLL SUMS
+Percentage of 2: 2.68%
+Percentage of 3: 5.37%
+Percentage of 4: 8.32%
+Percentage of 5: 10.99%
+Percentage of 6: 13.89%
+Percentage of 7: 16.96%
+Percentage of 8: 13.89%
+Percentage of 9: 11.19%
+Percentage of 10: 8.68%
+Percentage of 11: 5.28%
+Percentage of 12: 2.75%
+
+
+HISTOGRAM SHOWING UNIFORM DISTRIBUTION OF DICE ROLL SUMS
+
+                         *                             
+                         *                             
+                         *                             
+                    *    *    *                        
+                    *    *    *                        
+                    *    *    *                        
+               *    *    *    *    *                   
+               *    *    *    *    *                   
+               *    *    *    *    *    *              
+          *    *    *    *    *    *    *              
+          *    *    *    *    *    *    *              
+          *    *    *    *    *    *    *              
+     *    *    *    *    *    *    *    *    *         
+     *    *    *    *    *    *    *    *    *         
+*    *    *    *    *    *    *    *    *    *    *    
+*    *    *    *    *    *    *    *    *    *    *    
+*    *    *    *    *    *    *    *    *    *    *    
+2    3    4    5    6    7    8    9    10   11   12   
+
+
+FREQUENCY OF DICE ROLL SUMS
+Frequency of 2: 270
+Frequency of 3: 556
+Frequency of 4: 810
+Frequency of 5: 1105
+Frequency of 6: 1408
+Frequency of 7: 1663
+Frequency of 8: 1417
+Frequency of 9: 1080
+Frequency of 10: 866
+Frequency of 11: 529
+Frequency of 12: 296
+
+PERCENTAGE DISTRIBUTION OF DICE ROLL SUMS
+Percentage of 2: 2.70%
+Percentage of 3: 5.56%
+Percentage of 4: 8.10%
+Percentage of 5: 11.05%
+Percentage of 6: 14.08%
+Percentage of 7: 16.63%
+Percentage of 8: 14.17%
+Percentage of 9: 10.80%
+Percentage of 10: 8.66%
+Percentage of 11: 5.29%
+Percentage of 12: 2.96%
+
+
+HISTOGRAM SHOWING UNIFORM DISTRIBUTION OF DICE ROLL SUMS
+
+                         *                             
+                         *                             
+                         *                             
+                    *    *    *                        
+                    *    *    *                        
+                    *    *    *                        
+               *    *    *    *    *                   
+               *    *    *    *    *                   
+               *    *    *    *    *    *              
+          *    *    *    *    *    *    *              
+          *    *    *    *    *    *    *              
+     *    *    *    *    *    *    *    *              
+     *    *    *    *    *    *    *    *    *         
+     *    *    *    *    *    *    *    *    *         
+*    *    *    *    *    *    *    *    *    *    *    
+*    *    *    *    *    *    *    *    *    *    *    
+*    *    *    *    *    *    *    *    *    *    *    
+2    3    4    5    6    7    8    9    10   11   12   
+
+
+FREQUENCY OF DICE ROLL SUMS
+Frequency of 2: 262
+Frequency of 3: 571
+Frequency of 4: 842
+Frequency of 5: 1055
+Frequency of 6: 1355
+Frequency of 7: 1683
+Frequency of 8: 1417
+Frequency of 9: 1158
+Frequency of 10: 845
+Frequency of 11: 548
+Frequency of 12: 264
+
+PERCENTAGE DISTRIBUTION OF DICE ROLL SUMS
+Percentage of 2: 2.62%
+Percentage of 3: 5.71%
+Percentage of 4: 8.42%
+Percentage of 5: 10.55%
+Percentage of 6: 13.55%
+Percentage of 7: 16.83%
+Percentage of 8: 14.17%
+Percentage of 9: 11.58%
+Percentage of 10: 8.45%
+Percentage of 11: 5.48%
+Percentage of 12: 2.64%
+
+
+HISTOGRAM SHOWING UNIFORM DISTRIBUTION OF DICE ROLL SUMS
+
+                         *                             
+                         *                             
+                         *                             
+                    *    *    *                        
+                    *    *    *                        
+                    *    *    *    *                   
+               *    *    *    *    *                   
+               *    *    *    *    *                   
+               *    *    *    *    *                   
+          *    *    *    *    *    *    *              
+          *    *    *    *    *    *    *              
+     *    *    *    *    *    *    *    *              
+     *    *    *    *    *    *    *    *    *         
+     *    *    *    *    *    *    *    *    *         
+*    *    *    *    *    *    *    *    *    *    *    
+*    *    *    *    *    *    *    *    *    *    *    
+*    *    *    *    *    *    *    *    *    *    *    
+2    3    4    5    6    7    8    9    10   11   12   
+
+
+FREQUENCY OF DICE ROLL SUMS
+Frequency of 2: 290
+Frequency of 3: 496
+Frequency of 4: 830
+Frequency of 5: 1155
+Frequency of 6: 1431
+Frequency of 7: 1639
+Frequency of 8: 1372
+Frequency of 9: 1142
+Frequency of 10: 889
+Frequency of 11: 511
+Frequency of 12: 245
+
+PERCENTAGE DISTRIBUTION OF DICE ROLL SUMS
+Percentage of 2: 2.90%
+Percentage of 3: 4.96%
+Percentage of 4: 8.30%
+Percentage of 5: 11.55%
+Percentage of 6: 14.31%
+Percentage of 7: 16.39%
+Percentage of 8: 13.72%
+Percentage of 9: 11.42%
+Percentage of 10: 8.89%
+Percentage of 11: 5.11%
+Percentage of 12: 2.45%
+
+
+HISTOGRAM SHOWING UNIFORM DISTRIBUTION OF DICE ROLL SUMS
+
+                         *                             
+                         *                             
+                    *    *    *                        
+                    *    *    *                        
+               *    *    *    *                        
+               *    *    *    *    *                   
+               *    *    *    *    *                   
+               *    *    *    *    *    *              
+          *    *    *    *    *    *    *              
+          *    *    *    *    *    *    *              
+          *    *    *    *    *    *    *              
+     *    *    *    *    *    *    *    *    *         
+     *    *    *    *    *    *    *    *    *         
+*    *    *    *    *    *    *    *    *    *         
+*    *    *    *    *    *    *    *    *    *    *    
+*    *    *    *    *    *    *    *    *    *    *    
+2    3    4    5    6    7    8    9    10   11   12   
+
+
+FREQUENCY OF DICE ROLL SUMS
+Frequency of 2: 297
+Frequency of 3: 526
+Frequency of 4: 798
+Frequency of 5: 1102
+Frequency of 6: 1370
+Frequency of 7: 1693
+Frequency of 8: 1414
+Frequency of 9: 1124
+Frequency of 10: 794
+Frequency of 11: 578
+Frequency of 12: 304
+
+PERCENTAGE DISTRIBUTION OF DICE ROLL SUMS
+Percentage of 2: 2.97%
+Percentage of 3: 5.26%
+Percentage of 4: 7.98%
+Percentage of 5: 11.02%
+Percentage of 6: 13.70%
+Percentage of 7: 16.93%
+Percentage of 8: 14.14%
+Percentage of 9: 11.24%
+Percentage of 10: 7.94%
+Percentage of 11: 5.78%
+Percentage of 12: 3.04%
+
+
+HISTOGRAM SHOWING UNIFORM DISTRIBUTION OF DICE ROLL SUMS
+
+                         *                             
+                         *                             
+                         *                             
+                    *    *    *                        
+                    *    *    *                        
+                    *    *    *                        
+               *    *    *    *    *                   
+               *    *    *    *    *                   
+               *    *    *    *    *                   
+          *    *    *    *    *    *    *              
+          *    *    *    *    *    *    *              
+          *    *    *    *    *    *    *    *         
+     *    *    *    *    *    *    *    *    *         
+     *    *    *    *    *    *    *    *    *         
+*    *    *    *    *    *    *    *    *    *    *    
+*    *    *    *    *    *    *    *    *    *    *    
+*    *    *    *    *    *    *    *    *    *    *    
+2    3    4    5    6    7    8    9    10   11   12   
+

@@ -19,21 +19,36 @@ public class Game{
 
 	private static Scanner getInput = new Scanner(System.in);
 	private static Castle castle = new Castle();
+	private static DoomClock clock = new DoomClock();
+	private static Player player = new Player();
+
 	private static Room currentRoom = castle.getRoom();
 	private static Room route;
+
 	private static String routeChoice;
 	private static String direction;
+	private static String input;
+
 	private static boolean runGame;
 	private static boolean room;
 	// private static int combatChoice;
 	private static Random random = new Random();
+
 	private static ManorHouse manorHouse = new ManorHouse();
 	private static List<Room> manorRoomList = manorHouse.createList();
 	private static Hashtable<Integer, Room> table = manorHouse.createHashtable();
+
 	private static String roomName;
 	private static int randomNumber;
+
 	private static List<Integer> enteredRooms = new ArrayList<>();
 
+	private static Dice dice = new Dice();
+	private static int diceSum;
+
+	private static Minion spiderBabies;
+	private static Minion eyeballBats;
+	private static Swarm swarm = new Swarm();
 
 	//create a method to print the movement instructions 
 	private static void instructions(){
@@ -53,6 +68,90 @@ public class Game{
 		System.out.println("Good luck...");
 		System.out.println("");
 	} //end instructions method
+
+	// private static void monsterGenerator(){
+	// 	diceSum = dice.twoDSix();
+	// 	if (diceSum < 7){
+	// 		System.out.println("Two of Dracula's Minions appears");
+	// 		spiderBabies = swarm.getSpiderBabies();
+	// 		eyeballBats = swarm.getEyeballBats();
+	// 		combat(spiderBabies, eyeballBats);
+	// 	}
+	// 	else if (diceSum < 10){
+	// 		System.out.println("One of Dracula's Minions appears");
+	// 		if (diceSum % 2 == 0){
+	// 			spiderBabies = swarm.getSpiderBabies();
+	// 			combat(spiderBabies);
+	// 		}
+	// 		else{
+	// 			eyeballBats = swarm.getEyeballBats();	
+	// 			combat(eyeballBats);
+	// 		}
+	// 	}
+	// 	else{
+	// 		System.out.println("You managed to sneak into this area undetected.");
+	// 	}
+	// }//end monsterGenerator
+
+	// private static void combat(Minion minion1){
+	// 	System.out.println("You must defeat both of Dracula's minions before you can continue.");
+	// 	System.out.println("Type \"attack\" when you're ready.");
+	// 	System.out.println();
+	// 	input = getInput.nextLine();
+	// 	input = input.toLowerCase();
+
+	// 	if (input.equals("attack")){
+	// 		runGame = true;
+	// 		while(runGame){
+	// 			diceSum = dice.twoDSix();
+	// 			if (diceSum < 7){
+	// 				player.loseHearts(player.getHearts());
+	// 				continue;
+	// 			}
+	// 			else if (diceSum < 10){
+	// 				System.out.println("You defeated the " + minion1.getName() + ", but you took damage doing so.");
+	// 				System.out.println("You have " + player.getHearts() + " remaining.");
+	// 				runGame = false;
+	// 			}
+	// 			else{
+	// 				System.out.println("You defeated the " + minion1.getName() + ", and you took damage no doing!");
+	// 				System.out.println("You have " + player.getHearts() + " remaining.");
+	// 				runGame = false;
+	// 			}
+	// 		}
+			
+	// 	} 
+
+	// }
+
+	// private static void combat(Minion minion1, Minion minion2){
+	// 	System.out.println("You must defeat both of Dracula's minions before you can continue.");
+	// 	System.out.println("Type \"attack\" when you're ready.");
+	// 	System.out.println();
+	// 	input = getInput.nextLine();
+	// 	input = input.toLowerCase();
+
+	// 	if (input.equals("attack")){
+	// 		runGame = true;
+	// 		while(runGame){
+	// 			diceSum = dice.twoDSix();
+	// 			if (diceSum < 7){
+	// 				player.loseHearts(player.getHearts());
+	// 				continue;
+	// 			}
+	// 			else if (diceSum < 10){
+	// 				System.out.println("You defeated the " + minion1.getName() + ", but you took damage doing so.");
+	// 				System.out.println("You have " + player.getHearts() + " remaining.");
+	// 				runGame = false;
+	// 			}
+	// 			else{
+	// 				System.out.println("You defeated the " + minion1.getName() + ", and you took damage no doing!");
+	// 				System.out.println("You have " + player.getHearts() + " remaining.");
+	// 				runGame = false;
+	// 			}
+	// 		}
+	// 	}
+	// }
 
 	private static void pickRoute(){
 		runGame = true;
@@ -85,9 +184,10 @@ public class Game{
 
 	private static void approach(){
 		runGame = true;
-		while(runGame) {
+		while(runGame){
 			System.out.println(currentRoom);
-			System.out.println("");
+			System.out.println();
+
 			System.out.println("Are you ready to leave?");
 			System.out.println("Type \"y\" or \"n\"");
 
@@ -104,10 +204,10 @@ public class Game{
 			else if (direction.equals("n") || direction.equals("no")){
 				continue;
 			}
-			else if(direction.equals("q")) {
+			else if (direction.equals("q")) {
 				runGame = false;
 			}
-			else {
+			else{
 				System.out.println("You can't go that way.");
 			}
 		}
