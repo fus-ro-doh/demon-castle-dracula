@@ -199,6 +199,18 @@ public class Histogram{
 	// 	}
 	// }
 
+	protected static void average(Hashtable<Integer, Integer> frequency){
+		for(i = 2; i < 13; i++){
+			sum = frequency.get(i) * i + sum;
+			// per = (float)freq / 10000 * 100;
+			// percentages.put(i, per);
+			// percentage = String.format("%.02f", per);
+			// System.out.println("Percentage of " + i + ": " + percentage + "%");
+		}
+		avg = (float)sum / 10000;
+		System.out.println("Average value: " + avg);
+	}
+
 	public static void main(String[] args){
 
 		testTwoDSix();
@@ -223,6 +235,7 @@ public class Histogram{
 		System.out.println();
 		System.out.println();
 		
+		average(frequency);
 
 
 

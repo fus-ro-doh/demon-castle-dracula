@@ -7,7 +7,7 @@
 **/
 
 
-public class Room {
+public class Room{
 
     private String name; 
     private String description;
@@ -15,7 +15,7 @@ public class Room {
     private Room routeA;
     private Room routeB;
 
-    protected Room(String name, String description) {
+    protected Room(String name, String description){
         this.name = name;
         this.description = description;
         exit = null;
@@ -27,7 +27,7 @@ public class Room {
         return name;
     }
 
-    protected String getDescription() {
+    protected String getDescription(){
         return description;
     }
 
@@ -61,7 +61,7 @@ public class Room {
     }
 
     @Override
-    public String toString() {
+    public String toString(){
         String val = "" + description;
         return  val;
     }

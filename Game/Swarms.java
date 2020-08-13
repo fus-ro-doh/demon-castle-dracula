@@ -1,5 +1,7 @@
 /**
-* Overview:	Castle class creates rooms/areas/spaces contained within Dracula's Castle.
+* Overview:	Swarms class creates a collection of Minion objects, 
+* stores them in a List of Minion objects, 
+* and then maps a set of Integers to those Minion objects in a Hashtable.
 *
 * @author:  Daniel W. Jaeger
 * @version: 1.1
@@ -20,7 +22,7 @@ public class Swarms{
 	private Minion eyeballBats;
 	private Minion flyingGorgonHeads;
 	private Minion flamingSkulls;
-	private List<Minion> minions;
+	private List<Minion> swarms;
 	private Hashtable<Integer, Minion> table;
 	private int i;
 	
@@ -35,15 +37,15 @@ public class Swarms{
 		this.eyeballBats = new Minion("Eyeball Bats", "\nFist-sized eyeballs with leathery membranes stretched over finger-like bones. They radiate a cone of negative energy from their pupils that fries flesh from bone. The surface of the eye is covered in a sticky, flammable aqueous humor that sometimes explodes.");	
 	}//end Constructor
 
-	protected List<Swarms> createList(){
-		minions = Arrays.asList(spiderBabies, mechanicalScorpions, severedHands, eyeballBats, flyingGorgonHeads, flamingSkulls, eyeballBats);
-		return minions;
+	protected List<Minion> createList(){
+		swarms = Arrays.asList(spiderBabies, mechanicalScorpions, severedHands, eyeballBats, flyingGorgonHeads, flamingSkulls, eyeballBats);
+		return swarms;
 	}
 
-	protected Hashtable<Integer, Swarms> createHashtable(){
+	protected Hashtable<Integer, Minion> createHashtable(){
 		table = new Hashtable<Integer, Minion>();
-		for(i = 0; i < minions.size(); i++){
-			table.put(i, minions.get(i));
+		for(i = 0; i < swarms.size(); i++){
+			table.put(i, swarms.get(i));
 		}
 		return table;
 	}

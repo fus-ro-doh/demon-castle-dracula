@@ -33,6 +33,11 @@ public class Test{
 	private static Scanner input = new Scanner(System.in);
 	private static String userInput;
 	private static Player player;
+	
+	private static Swarms swarm = new Swarms();
+	private static List<Minion> minions = swarm.createList();
+	private static Hashtable<Integer, Minion> minionTable = swarm.createHashtable();
+	private static Minion minion;
 
 	public static int randomNumber(){
 		return randNum.nextInt(8);
@@ -41,6 +46,9 @@ public class Test{
 	
 	public static void combat(){
 		System.out.println("Oh, no! You've encounterd some of Dracula's minions!");
+		diceRoll = randNum.nextInt(minions.size());
+		minion = minionTable.get(diceRoll);
+		System.out.println(minion.getDescription());
 		System.out.println("You must defeat them before you can move on.");
 		System.out.println();
 		run = true;
@@ -96,7 +104,7 @@ public class Test{
 		player = new Player(input.nextLine());
 		System.out.println("Good luck, " + player.getName() + ".");
 		System.out.println();
-
+		
 		combat();
 
 

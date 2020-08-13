@@ -2,9 +2,8 @@
 
 
 
-public class Player{
+public class Player extends Character{
 
-	private String name;
 	private int hearts;
 	private int attackBuff;
 
@@ -15,9 +14,9 @@ public class Player{
 		hearts = 8;
 	}
 
-	protected String getName(){
-		return this.name;
-	}
+	// protected String getName(){
+	// 	return this.name;
+	// }
 
 	protected int getAttackBuff(){
 		return this.attackBuff;
@@ -27,7 +26,6 @@ public class Player{
 		return this.hearts;
 	}
 
-
 	protected void loseHearts(int hearts){
 		this.hearts = (hearts - 1);
 		// return (this.hearts - 1);
@@ -36,10 +34,5 @@ public class Player{
 	protected void refillHearts(){
 		this.hearts = 8;
 	}
-
-
-
-
-
 }//end class
 
