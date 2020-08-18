@@ -66,4 +66,8 @@ public class Castle{
 	protected Room getTower(){
 		return tower; 
 	}
+
+	protected Room getThrone(){
+		return throneRoom; 
+	}
 }//end class
