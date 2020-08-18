@@ -38,15 +38,19 @@ public class Swarms{
 	}//end Constructor
 
 	protected List<Minion> createList(){
-		swarms = Arrays.asList(spiderBabies, mechanicalScorpions, severedHands, eyeballBats, flyingGorgonHeads, flamingSkulls, eyeballBats);
-		return swarms;
+		this.swarms = Arrays.asList(spiderBabies, mechanicalScorpions, severedHands, eyeballBats, flyingGorgonHeads, flamingSkulls, eyeballBats);
+		return this.swarms;
 	}
 
 	protected Hashtable<Integer, Minion> createHashtable(){
-		table = new Hashtable<Integer, Minion>();
-		for(i = 0; i < swarms.size(); i++){
-			table.put(i, swarms.get(i));
+		this.table = new Hashtable<Integer, Minion>();
+		for(i = 0; i < this.swarms.size(); i++){
+			this.table.put(i, this.swarms.get(i));
 		}
-		return table;
+		return this.table;
+	}
+
+	protected Minion getSwarm(int index){
+		return this.swarms.get(index);
 	}
 }//end class

@@ -26,7 +26,7 @@ public class Player extends Character{
 		return this.hearts;
 	}
 
-	protected void loseHearts(int hearts){
+	protected void loseHearts(){
 		this.hearts = (hearts - 1);
 		// return (this.hearts - 1);
 	}

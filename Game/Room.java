@@ -11,6 +11,7 @@ public class Room{
 
     private String name; 
     private String description;
+    private Room room;
     private Room exit;
     private Room routeA;
     private Room routeB;
@@ -58,6 +59,14 @@ public class Room{
 
     protected Room getExit(){
         return exit;
+    }
+
+    protected void setRoom(Room room){
+        this.room = room;
+    }
+
+    protected Room getRoom(){
+        return room;
     }
 
     @Override

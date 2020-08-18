@@ -9,17 +9,17 @@ public class DoomClock{
 
 
 	protected DoomClock(){
-		counter = 0;
+		this.counter = 0;
 
 	}
 
 	protected int increment(){
-		return counter++;
+		return this.counter++;
 	}
 
 	protected int getTime(){
 		// System.out.println("The Doom Clock sits at " + this.counter);
-		return counter;
+		return this.counter;
 	}
 
 }//end class

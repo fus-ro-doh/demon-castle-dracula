@@ -31,4 +31,8 @@ public class Dice{
 		return (dice() + dice());
 	}
 
+	protected static int twoDSixPlusOne(){
+		return (dice() + dice() + 1);
+	}
+
 }//end class

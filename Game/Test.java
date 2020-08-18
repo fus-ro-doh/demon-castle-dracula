@@ -98,6 +98,11 @@ public class Test{
 		}
 	}
 
+	public static void rest(){
+		player.refillHearts();
+		doomClock.increment();
+	}
+
 	public static void main(String[] args){
 		System.out.println();
 		System.out.print("Please name your character: ");
@@ -107,6 +112,16 @@ public class Test{
 		
 		combat();
 
+		System.out.println("Would you like to rest and heal?");
+		System.out.println("Type \"rest\" to rest and heal, type \"leave\" to enter next area.");
+		if(input.nextLine() == "rest"){
+			rest();
+		}
+		else if(input.nextLine() == "leave"){
+		}
+		else{
+			System.out.println("input not recognized.");
+		}
 
 		run = true;
 		diceRoll = 0;
