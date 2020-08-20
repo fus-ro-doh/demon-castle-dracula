@@ -2,8 +2,8 @@
 * Overview:	Class that defines Room objects. 
 *
 * @author:  Daniel W. Jaeger
-* @version: 1.1
-* Date:     8/9/20
+* @version: 1.2
+* Date:     8/17/20
 **/
 
 

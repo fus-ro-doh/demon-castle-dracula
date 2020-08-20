@@ -27,14 +27,14 @@ public class ManorHouse{
 	private int i;
 
 	protected ManorHouse(){
-		this.banquetHall = new Room("Banquet Hall", "\nYou enter a cavernous ballroom with taxidermied animals hanging on the walls and over the fireplace. Ghostly music emanates from unseen instruments. There are long tables overflowing with delicious-smelling food. A thunderstorm rages outside");
-		this.livingQuarters = new Room("Living Quarters", "\nYou enter a luxuriously appointed suite of bedrooms, antechambers, and salons filled with finely crafted furniture");
-		this.lunarium = new Room("Lunarium", "\nYou enter the Lunarium, an enormous greenhouse suffused with the blood moon eclipse’s crimson glow.");
-		this.armory = new Room("Armory", "\nYou enter the Armory. It is a honeycomb of stalls, hallways, and storerooms filled with an unrivaled collection of armor and weapons from every civilization that has known Dracula’s evil.");
-		this.dungeon = new Room("Dungeon", "\nYou find yourself in the Dungeon. This is a dank, Escher-like morass of iron-barred torture chambers where Dracula performs his infernal experiments on living and dead alike. The entire jumble reverberates with the lamentations of its victims.");
-		this.treasureHoard = new Room("Treasure Hoard", "\nYou have come upon Dracula's Treasure Hoard. Entering, you find yourself inside a gigantic vault with a glittering mountain of gold, jewels, and priceless artifacts reaching toward the ceiling.");
-		this.library = new Room("Library", "\nDracula's Library. Inside, you find an unimaginably huge archive of books, scrolls, artifacts, and other documents from throughout time and space. What knowledge housed within, and at what cost is it derived?");
-		this.chapel = new Room("Chapel", "\nYou enter...a chapel. A simple church of wood and stone lit by hundreds of wax candles. Can Dracula even enter this space? Are you safe here? Can God—or whatever diety this chapel exists to exalt—protect you within these hallowed walls? Somehow, you think not...");
+		this.banquetHall = new Room("Banquet Hall", "\nYou enter a cavernous ballroom with taxidermied animals\nhanging on the walls and over the fireplace.\nGhostly music emanates from unseen instruments. \nThere are long tables overflowing with delicious-smelling food.\nA thunderstorm rages outside.");
+		this.livingQuarters = new Room("Living Quarters", "\nYou enter a luxuriously appointed suite of bedrooms,\nantechambers, and salons filled with finely crafted furniture");
+		this.lunarium = new Room("Lunarium", "\nYou enter the Lunarium,\nan enormous greenhouse suffused with\nthe Blood Moon Eclipse’s crimson glow.");
+		this.armory = new Room("Armory", "\nYou enter the Armory.\nIt is a honeycomb of stalls, hallways, and storerooms\nfilled with an unrivaled collection of armor and weapons\nfrom every civilization that has known Dracula’s evil.");
+		this.dungeon = new Room("Dungeon", "\nYou find yourself in the Dungeon.\nThis is a dank, Escher-like morass\nof iron-barred torture chambers where Dracula\nperforms his infernal experiments on living and dead alike.\nThe entire jumble reverberates with the lamentations of its victims.");
+		this.treasureHoard = new Room("Treasure Hoard", "\nYou have come upon Dracula's Treasure Hoard.\nEntering, you find yourself inside a gigantic vault\nwith a glittering mountain of gold, jewels,\nand priceless artifacts reaching toward the ceiling.");
+		this.library = new Room("Library", "\nDracula's Library.\nInside, you find an unimaginably huge archive\nof books, scrolls, artifacts, and other documents\nfrom throughout time and space.\nWhat knowledge housed within,\nand at what cost is it derived?");
+		this.chapel = new Room("Chapel", "\nYou enter...a chapel?\nA simple church of wood and stone\nlit by hundreds of wax candles.\nCan Dracula even enter this space?\nAre you safe here?\nCan God—or whatever diety this chapel exists to exalt—\nprotect you within these hallowed walls?\nSomehow, you think not...");
 	}//end Constructor
 
 	protected List<Room> createList(){

@@ -1,3 +1,11 @@
+/**
+* Overview:	a file for testing concepts
+*
+* @author:  Daniel W. Jaeger
+* @version: 1.2
+* Date:     8/17/20
+**/
+
 import java.util.Scanner;
 
 
@@ -26,17 +34,17 @@ public class Dracula extends Enemy{
 	}
 
 	protected void finalConfrontation(Player player){
-		System.out.println("Attack me...if you dare.");
+		System.out.println("Attack me...if you dare.\"");
 		System.out.println();
 		System.out.println("This is the final battle.");
 		System.out.println("You must successfully attack Dracula three times in order to defeat him.");
 		System.out.println();
-		System.out.println("what would you like to do?");
+		System.out.println("What would you like to do?");
 
 		this.run = true;
 		while(this.run){
 			if (this.health <= 0){
-				System.out.println("Congratulations!!! You defeated the Demon King, Lord Dracula!");
+				System.out.println("Congratulations!!!\nYou defeated the Demon King, Lord Dracula!");
 				System.out.println("Thank you for playing Demon Castle Dracula.");
 				System.out.println();
 				System.exit(0);
@@ -67,7 +75,7 @@ public class Dracula extends Enemy{
 					System.out.println();
 					player.loseHearts();
 					player.loseHearts();
-					System.out.println("You strike a mighty blow to Lord Dracula, but you lost some heart in the process.");
+					System.out.println("You strike a mighty blow to Lord Dracula,\nbut you lost some heart in the process.");
 					this.health = loseHealth();
 					System.out.println("Hearts: " + player.getHearts());
 					System.out.println("Dracula: " + getHealth());
