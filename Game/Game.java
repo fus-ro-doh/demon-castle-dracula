@@ -2,8 +2,8 @@
 * Overview:	The "game". This file runs the game, allowing a user to "play" Demon Castle Dracula.
 *
 * @author:  Daniel W. Jaeger
-* @version: 1.1
-* Date:     8/9/20
+* @version: 1.2
+* Date:     8/17/20
 **/
 
 import java.util.Scanner;
@@ -13,7 +13,12 @@ import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.List;
 
-
+/*
+ * Create an ENUM class/file or to store all Strings 
+ * OR 
+ * Store every used String as a private final String NAME_OF_STRING 
+ * in the class utilized the string
+ */
 
 public class Game{
 
@@ -26,19 +31,25 @@ public class Game{
 	private static Room route;
 
 	private static String routeChoice;
-	// private static String input;
 	private static String input;
 
 	private static boolean runGame;
 	private static boolean room;
 	private static boolean run;
 
-	// private static int combatChoice;
 	private static Random random = new Random();
 
+	/*
+	* add createList() and createHashtable() to ManorHouse constructor 
+	* add getList() and getHastTable() to ManorHouse class 
+	*/
 	private static ManorHouse manorHouse = new ManorHouse();
 	private static List<Room> manorRoomList = manorHouse.createList();
 	private static Hashtable<Integer, Room> table = manorHouse.createHashtable();
+
+	/*
+	* maybe make a Castle Room list that can be checked to execute certain methods?
+	*/
 
 	private static String roomName;
 	private static int randomNumber;
@@ -50,6 +61,10 @@ public class Game{
 
 	private static Minion minion;
 	private static Swarms swarms = new Swarms();
+	/*
+	* add createList() and createHashtable() to Swarms constructor 
+	* add getList() and getHastTable() to Swarms class 
+	*/
 	private static List<Minion> swarmsList = swarms.createList();
 	private static Hashtable<Integer, Minion> swarmsTable = swarms.createHashtable();
 
@@ -63,47 +78,14 @@ public class Game{
 		System.out.println();			
 		System.out.println("If at any point you can no longer continue, press q to quit.");
 		System.out.println();
-		// System.out.println("Good luck...");
-		// System.out.println();
 	} //end instructions method
 
-	
-
-
-	// private static void combat(Minion minion1, Minion minion2){
-	// 	System.out.println("You must defeat both of Dracula's minions before you can continue.");
-	// 	System.out.println("Type \"attack\" when you're ready.");
-	// 	System.out.println();
-	// 	input = getInput.nextLine();
-	// 	input = input.toLowerCase();
-
-	// 	if (input.equals("attack")){
-	// 		runGame = true;
-	// 		while(runGame){
-	// 			diceSum = dice.twoDSixPlusOne();
-	// 			if (diceSum < 7){
-	// 				player.loseHearts(player.getHearts());
-	// 				continue;
-	// 			}
-	// 			else if (diceSum < 10){
-	// 				System.out.println("You defeated the " + minion1.getName() + ", but you took damage doing so.");
-	// 				System.out.println("You have " + player.getHearts() + " remaining.");
-	// 				runGame = false;
-	// 			}
-	// 			else{
-	// 				System.out.println("You defeated the " + minion1.getName() + ", and you took damage no doing!");
-	// 				System.out.println("You have " + player.getHearts() + " remaining.");
-	// 				runGame = false;
-	// 			}
-	// 		}
-	// 	}
-	// }
-
 	private static void pickRoute(){
+		System.out.println(currentRoom);
+		System.out.println("");
+
 		runGame = true;
-		while(runGame){
-			System.out.println(currentRoom);
-			System.out.println("");
+		while(runGame){	
 			System.out.println("Do you head into the Cemetery or descend into the Crypt?");
 			System.out.println("");
 
@@ -135,6 +117,15 @@ public class Game{
 	private static void combat(){
 		// runGame = true;
 		// while(runGame){
+
+		/*
+		 * Need to add a MonsterGenerator method()
+		 *
+		*/
+
+		/*
+		 * Convert dice rolling to a Player method
+		*/
 			diceSum = dice.twoDSixPlusOne();
 			// if (diceSum < 7){
 			// 	randomNumber = random.nextInt(swarmsList.size());
@@ -280,7 +271,7 @@ public class Game{
 				run = false;
 			}
 			else if (input.equals("rest")){
-				System.out.println("typed rest");
+				// System.out.println("typed rest");
 				rest();
 				if (clock.getTime() >= 4){
 					System.out.println();
@@ -376,67 +367,12 @@ public class Game{
 		}
 		runGame = true;
 		while(runGame){
-			System.out.println("Entered first while loop.");
+			// System.out.println("Entered first while loop.");
 			System.out.println(currentRoom);
 			// System.out.println();
 
 			combat();
 			postCombatChoice();
-			// run = true;
-
-			// while(run){
-			// 	System.out.println("Entered second while loop.");
-
-			// 	// System.out.println("Entered while loop");
-			// 	// currentRoom = currentRoom.getExit();
-
-			// 	System.out.println("What would you like to do now?");
-			// 	System.out.println("Would you like to LEAVE or REST?");
-
-			// 	input = getInput.nextLine();
-			// 	input = input.toLowerCase();
-			// 	// System.out.println(input);
-			// 		// run = false;
-
-			// 	if (input.equals("leave")){
-			// 		System.out.println("typed leave");
-			// 		currentRoom = currentRoom.getExit();
-					
-			// 		if(currentRoom.getName() == "Manor House"){
-			// 			System.out.println(currentRoom);
-			// 			runGame = false;
-			// 			run = false;
-			// 		}
-			// 		run = false;
-			// 	}
-			// 	else if (input.equals("rest")){
-			// 		System.out.println("typed rest");
-			// 		rest();
-			// 		if (clock.getTime() >= 4){
-			// 			System.out.println();
-			// 			System.out.println("Oh, no. Oh, God, no...");
-			// 			System.out.println("The Doom Clock ticks over to midnight.");
-			// 			System.out.println("Dracula appears. The ritual is complete.");
-			// 			System.out.println("Now we enter 1000 years of darkness.");
-			// 			System.out.println("You have failed.");
-			// 			System.out.println();
-			// 			System.out.println("Thank you for playing Demon Castle Dracula.");
-			// 			System.out.println();
-
-			// 			// runGame = false;
-			// 			System.exit(0);
-			// 		}
-			// 	}
-			// 	else if (input.equals("q")) {
-			// 		// run = false
-			// 		// runGame = false;
-			// 		System.exit(0);					
-			// 	}	
-			// 	else{
-			// 		System.out.println("Sorry. Invalid input. Try again.");
-			// 		System.out.println();
-			// 	}
-			// }
 		}
 	} //end move method
 
@@ -466,6 +402,7 @@ public class Game{
 				postFightChoiceManor();
 
 			}
+<<<<<<< HEAD
 			// room = true;
 			// while(room){
 			// 	if (currentRoom != null){
@@ -511,6 +448,8 @@ public class Game{
 			// 	}
 			// }
 >>>>>>> story#1
+=======
+>>>>>>> story#1
 		}
 	}
 
@@ -536,29 +475,6 @@ public class Game{
 				dracula.finalConfrontation(player);
 >>>>>>> story#1
 			}
-			
-			// System.out.println("Are you ready to leave?");
-			// System.out.println("Type \"y\" or \"n\"");
-
-			// input = getInput.nextLine();
-			// input = input.toLowerCase();
-			
-			// if (input.equals("y") || input.equals("yes")) {
-			// 	currentRoom = currentRoom.getExit();
-			// 	if(currentRoom.getName() == "Manor House"){
-			// 		System.out.println(currentRoom);
-			// 		runGame = false;
-			// 	}
-			// }
-			// else if (input.equals("n") || input.equals("no")){
-			// 	continue;
-			// }
-			// else if(input.equals("q")) {
-			// 	runGame = false;
-			// }
-			// else {
-			// 	System.out.println("You can't go that way.");
-			// }
 		}
 	} 
 

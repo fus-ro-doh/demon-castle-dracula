@@ -2,8 +2,8 @@
 * Overview:	a file for testing concepts
 *
 * @author:  Daniel W. Jaeger
-* @version: 1.1
-* Date:     8/9/20
+* @version: 1.2
+* Date:     8/17/20
 **/
 
 import java.util.*;
@@ -36,8 +36,8 @@ public class Test{
 
 	private static DoomClock doomClock = new DoomClock();
 
-	private static Scanner input = new Scanner(System.in);
-	private static String userInput;
+	private static Scanner getInput = new Scanner(System.in);
+	private static String input;
 	private static Player player;
 	
 	private static Swarms swarm = new Swarms();
@@ -113,13 +113,13 @@ public class Test{
 		run = true;
 		while(run){
 			System.out.println("Type \"attack\" to attack.");
-			userInput = input.nextLine();
-			userInput.toLowerCase();
-			if(userInput.equals("attack")){
+			input = getInput.nextLine();
+			input.toLowerCase();
+			if(input.equals("attack")){
 				diceRoll = dice.twoDSix();
 				if (diceRoll < 7){
 					System.out.println();
-					player.loseHearts(player.getHearts());
+					player.loseHearts();
 					System.out.println("Your attack failed, and you lost heart.");
 					System.out.println("Hearts: " + player.getHearts());
 					if (player.getHearts() <= 0){
@@ -132,7 +132,7 @@ public class Test{
 				}
 				else if (diceRoll < 10){
 					System.out.println();
-					player.loseHearts(player.getHearts());
+					player.loseHearts();
 					System.out.println("You defeated the minions, but you lost some heart in the process.");
 					System.out.println("Hearts: " + player.getHearts());
 					System.out.println();
@@ -166,7 +166,7 @@ public class Test{
 	public static void main(String[] args){
 		System.out.println();
 		System.out.print("Please name your character: ");
-		player = new Player(input.nextLine());
+		player = new Player(getInput.nextLine());
 		System.out.println("Good luck, " + player.getName() + ".");
 		System.out.println();
 		
@@ -174,13 +174,13 @@ public class Test{
 
 		System.out.println("Would you like to rest and heal?");
 		System.out.println("Type \"rest\" to rest and heal, type \"leave\" to enter next area.");
-		if(input.nextLine() == "rest"){
+		if(getInput.nextLine() == "rest"){
 			rest();
 		}
-		else if(input.nextLine() == "leave"){
+		else if(getInput.nextLine() == "leave"){
 		}
 		else{
-			System.out.println("input not recognized.");
+			System.out.println("getInput not recognized.");
 		}
 
 		run = true;

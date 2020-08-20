@@ -4,8 +4,8 @@
 * and then maps a set of Integers to those Minion objects in a Hashtable.
 *
 * @author:  Daniel W. Jaeger
-* @version: 1.1
-* Date:     8/9/20
+* @version: 1.2
+* Date:     8/17/20
 **/
 
 
@@ -28,13 +28,13 @@ public class Swarms{
 	
 
 	protected Swarms(){
-		this.spiderBabies = new Minion("Spider Babies", "\nShiny black arachnids with porcelain baby doll heads. Their laughter echoes long after their death.");
-		this.mechanicalScorpions = new Minion("Mechanical Scorpions", "\nClockwork scorpions with venomous stingers. You hear the clattering of their metallic legs as they clamber down the walls and skitter towards you." );
-		this.severedHands = new Minion("Severed Hands", "\nSevered hands claw their way towards you. Scratching. Grasping. Untiring.");
-		this.eyeballBats = new Minion("Eyeball Bats", "\nEyeball Bats. You hate Eyeball Bats. Everyone hates Eyeball Bats.");
-		this.flyingGorgonHeads = new Minion("Flying Gorgon Heads", "\nFlying Gorgon Heads swoop towards you, screeching horribly, their tinny voices piercing your ears, echoing through your skull. You will not soon forget this sound.");
-		this.flamingSkulls = new Minion("Flaming Skulls", "\nFlaming Skulls rolls towards you, leaving a flaming trail in their wake, screaming and biting.");
-		this.eyeballBats = new Minion("Eyeball Bats", "\nFist-sized eyeballs with leathery membranes stretched over finger-like bones. They radiate a cone of negative energy from their pupils that fries flesh from bone. The surface of the eye is covered in a sticky, flammable aqueous humor that sometimes explodes.");	
+		this.spiderBabies = new Minion("Spider Babies", "\nShiny black arachnids with porcelain baby doll heads.\nTheir laughter echoes long after their death.");
+		this.mechanicalScorpions = new Minion("Mechanical Scorpions", "\nClockwork scorpions with venomous stingers.\nYou hear the clattering of their metallic legs\nas they clamber down the walls and skitter towards you." );
+		this.severedHands = new Minion("Severed Hands", "\nSevered hands claw their way towards you.\nScratching.\nGrasping.\nHorribly manicured.\nUntiring.");
+		this.eyeballBats = new Minion("Eyeball Bats", "\nEyeball Bats.\nYou hate Eyeball Bats.\nEveryone hates Eyeball Bats.");
+		this.flyingGorgonHeads = new Minion("Flying Gorgon Heads", "\nFlying Gorgon Heads swoop towards you, screeching horribly,\ntheir tinny voices piercing your ears, echoing through your skull.\nYou will not soon forget this sound.");
+		this.flamingSkulls = new Minion("Flaming Skulls", "\nFlaming Skulls rolls towards you,\nleaving a firery trail in their wake,\nscreaming and biting.");
+		this.eyeballBats = new Minion("Eyeball Bats", "\nFist-sized eyeballs with leathery membranes stretched over finger-like bones.\nThey radiate a cone of negative energy from their pupils that fries flesh from bone.\nThe surface of the eye is covered in a sticky,\nflammable aqueous humor that sometimes explodes.");	
 	}//end Constructor
 
 	protected List<Minion> createList(){
